@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+    <div class="container mt-3">
+
+        <h1>ALL TODO</h1>
+        <!-- <div class="form-group">
+            <h1>ALL TODO</h1>
+            <input type="text" id="text-input" class="form-control input-todo" />
+            <input type="button" onClick="addClickButton()" id="button-save" class="btn btn-primary" value="CREATE" />
+            <input type="button" onClick="deleteAllItem()" id="button-deleteAll" class="btn btn-danger"
+                value="DELETE ALL" />
+
+
+
+        </div> -->
+        <div class="input-group mb-3">
+            <input type="text" id="text-input" class="form-control" placeholder="Something clever..">
+            <div class="input-group-append">
+                <button class="btn btn-primary" type="button" onClick="addClickButton()" id="button-save" >CREATE</button>
+                <button class="btn btn-danger" type="button" onClick="deleteAllItem()" id="button-deleteAll" >DELETE ALL</button>
+            </div>
+        </div>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Detail</th>
+                    <th scope="col">Actions</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody id="ul-list">
+
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
+
+<script type="text/javascript" src="index.js"> </script>
