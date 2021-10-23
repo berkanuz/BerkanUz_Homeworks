@@ -1,9 +1,10 @@
 .tableButton {
     margin: 5px;
 }
-.td-action-buttons{
-    width: 400px;
-}
 .row-header{
     width: 40px;
+}
+
+#action-buttons-section{
+    width: 280px;
 }
