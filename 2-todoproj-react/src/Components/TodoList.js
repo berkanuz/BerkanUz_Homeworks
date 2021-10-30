@@ -1,40 +1,26 @@
 import React from "react";
+import Bootstrap from "react-bootstrap"
 
-const TodoList = ({allTodos}) => {
+const TodoList = ({ allTodos, deleteItem }) => {
 
     return (
         <div>
             <ul class="snaps">
                 {
                     allTodos.map((item, index) => (
-                        <li>
+                        <li key={item.id}>
                             <div class="title">{item.text}</div>
                             <div class="date">
-                                <span>{"id: "+item.id}</span>
+                                <span>{"Created Date: " + item.createdDate}</span>
+
+                                {/* <span>{"id: " + item.id}</span> */}
+                                <span><button class="btn btn-danger" type="button" onClick={(e) => { deleteItem(item.id) }} id="button-deleteAll">Delete</button> </span>
                             </div>
                         </li>
                     ))
-
                 }
-                {/* <li>
-                    <div class="title">Lorem ipsum dolor sit amet</div>
-                    <div class="date">
-                        <span>now</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="title">Curabitur gravida arcu ac tortor dignissim.</div>
-                    <div class="date">
-                        <span>5 minutes ago</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="title">Tristique risus nec feugiat in fermentum.</div>
-                    <div class="date">
-                        <span>7 minutes ago</span>
-                    </div>
-                </li> */}
             </ul>
+            <div class="counter">{allTodos.length} todo(s)</div>
         </div>
 
     );
